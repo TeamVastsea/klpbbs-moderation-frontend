@@ -2,7 +2,7 @@
 
 import { TextInput, PasswordInput, Button, Paper, Title, Container } from '@mantine/core';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { notifications } from '@mantine/notifications';
 
 export default function LoginPage() {
@@ -20,7 +20,7 @@ export default function LoginPage() {
           message: '欢迎回来',
           color: 'green'
         });
-        router.push('/dashboard');
+        router.replace('/dashboard');
       } else {
         notifications.show({
           title: '登录失败',
